@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    box-sizing: border-box;
+    height: 100vw;
+    /* 讓佔滿視窗的高度 */
+}
+*{
+    color: #4d4e53;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+#main-doc{
+    display:flex;
+}
+#navbar{
+    height: 100%;
+    width: 310px;
+    border-right:1px solid #4d4e53;
+    position: fixed;
+}
+#navbar ul{
+    padding-inline-start:0;
+    margin-block-start:0;
+}
+header{
+    color: black;
+    font-size: 1.8rem;
+    margin:25px;
+}
+#navbar header h1{
+    font-size: 1.8rem;
+    text-align: center;
+}
+#navbar li{
+    border-top: 1px solid black;
+    list-style: none;
+    padding: 12px 35px;
+}
+.content{
+    text-align: justify;
+    margin-left: 330px;
+    width: calc(100% - 380px);
+    margin-bottom:25px;
+}
+p{
+    margin-left: 40px;
+
+}
+.content li,code{
+    margin-left: 80px;
+}
+p,.content li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+code{
+    background-color: #f7f7f7;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+}
+@media(max-width:815px) {
+    #main-doc{
+        display:block
+    }
+    .content{
+        position: static;
+        margin-left: 0;
+    }
+    #navbar{
+        width:100%;
+        border-right:1px solid #4d4e53; 
+        position: static;
+
+    }
+    #navbar ul{
+        border-top: 3px solid #4d4e53;
+        border-bottom: 3px solid #4d4e53;
+        max-height: 200px; /* 設置最大高度 */
+        overflow-y: auto;
+
+    }
+}
